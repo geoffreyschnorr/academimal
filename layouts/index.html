@@ -22,11 +22,11 @@
 
 {{ with .Site.Data.publications }}
 <hr>
-<h2 id="publications">Publications</h2>
+<h2 id="publications">Job Market Paper</h2>
 {{ range . }}
 {{ range .works }}
 {{ partial "publication.html" (dict "context" . "pid" ($scratch.Get "pubcnt")) }}
-{{ $scratch.Add "pubcnt" 1 }}   
+{{ $scratch.Add "pubcnt" 1 }}
 {{ end }}
 {{ end }}
 {{ end }}
@@ -38,7 +38,7 @@
 {{ range . }}
 {{ range .works }}
 {{ partial "publication.html" (dict "context" . "pid" ($scratch.Get "pubcnt")) }}
-{{ $scratch.Add "pubcnt" 1 }}   
+{{ $scratch.Add "pubcnt" 1 }}
 {{ end }}
 {{ end }}
 {{ end }}
@@ -49,20 +49,20 @@
 {{ range . }}
 {{ range .works }}
 {{ partial "publication.html" (dict "context" . "pid" ($scratch.Get "pubcnt")) }}
-{{ $scratch.Add "pubcnt" 1 }}   
+{{ $scratch.Add "pubcnt" 1 }}
 {{ end }}
 {{ end }}
 {{ end }}
 
 {{ with .GetPage "/sections/from-another-life.md" }}
 <hr>
-<h2 id="fromanotherlife">From Another Life</h2>
+<h2 id="fromanotherlife">Selected Pre-PhD Publications</h2>
 {{ .Content }}
 {{ end }}
 
-{{ with .GetPage "/sections/personal.md" }}
+{{ with .GetPage "/sections/policy.md" }}
 <hr>
-<h2 id="personal">Personal</h2>
+<h2 id="personal">Policy Work</h2>
 {{ .Content }}
 {{ end }}
 
